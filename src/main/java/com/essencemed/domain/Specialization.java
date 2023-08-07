@@ -8,7 +8,7 @@ import java.time.Duration;
 @Value
 @Builder
 public class Specialization {
-    Long id;
+    Long specializationId;
     String name;
     Duration visitTime;
 }

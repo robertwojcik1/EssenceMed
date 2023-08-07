@@ -9,7 +9,7 @@ import java.time.LocalTime;
 @Value
 @Builder
 public class DoctorSchedule {
-    Long id;
+    Long doctorScheduleId;
     Long doctorId;
     LocalTime startHour;
     LocalTime endHour;

@@ -6,7 +6,7 @@ import lombok.Value;
 @Value
 @Builder
 public class Patient {
-    Long id;
+    Long patientId;
     String firstName;
     String lastName;
     String email;

@@ -7,7 +7,7 @@ import lombok.Value;
 @Builder
 public class Admin {
 
-    Long id;
+    Long adminId;
     String email;
     String password;
 }
