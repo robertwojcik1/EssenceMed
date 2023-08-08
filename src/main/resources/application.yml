@@ -7,7 +7,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/essencemed
+    url: jdbc:postgresql://localhost:5432/essence-med
     username: postgres
     password: postgres
     hikari:
