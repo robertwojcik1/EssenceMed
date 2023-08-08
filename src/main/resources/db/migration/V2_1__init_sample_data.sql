@@ -1,32 +1,32 @@
-insert into users (email, password)
+insert into users (email, password, active)
 values
 --     admin 1-4
-    ('tomek@gmail.com', '$2a$12$TzIHka.M2r597FjIgAnMGOhDQ0cFllQaUP71quBbK8W8fizrhFxBy'),
-    ('paulina321@interia.pl', '$2a$12$wsezP0.lG4bC5mq4JsNa0esrGM5BaE/RvAVf37lTpUa4ll/8nJo82'),
-    ('piotrw@wp.pl', '$2a$12$Wox3ZqdWCfRCYHKJC9j9gu4hrtmbi1dyLDQhLW2l/A2wgzHYSpLXi'),
-    ('raf654@onet.pl', '$2a$12$jtBOzctNQhzFgWvUbFH6DeqQFOZ4GDFxJmdi0UeD00Q7h9xQPRWTS'),
+    ('tomek@gmail.com', '$2a$12$TzIHka.M2r597FjIgAnMGOhDQ0cFllQaUP71quBbK8W8fizrhFxBy', true),
+    ('paulina321@interia.pl', '$2a$12$wsezP0.lG4bC5mq4JsNa0esrGM5BaE/RvAVf37lTpUa4ll/8nJo82', true),
+    ('piotrw@wp.pl', '$2a$12$Wox3ZqdWCfRCYHKJC9j9gu4hrtmbi1dyLDQhLW2l/A2wgzHYSpLXi', true),
+    ('raf654@onet.pl', '$2a$12$jtBOzctNQhzFgWvUbFH6DeqQFOZ4GDFxJmdi0UeD00Q7h9xQPRWTS', true),
 -- patients 5-14
-    ('sberrey0@ftc.gov', '$2a$12$5AIxjPpLmDg4lnEIZY20wuBpvC9Fcw1V7XBcH0ZoIbYZ4J2jnxdKS'),
-    ('tkingaby1@vkontakte.ru', '$2a$04$L4ytMVXRckC5E/O4.gLP.uC9J58Sr8Pt7wblHki8AuasUqoMtCanq'),
-    ('ladcock2@typepad.com', '$2a$04$VBqjGGOu9Us/OjMEZcufvOLycizHUoKJzzQRbPCkLvx60b7lL3yJO'),
-    ('jrittmeier3@nbcnews.com', '$2a$04$KY3pibnuTDS2tBWnQX39eugy9hdLDccFT2YW4e2FsEKUH8CVC2QhO'),
-    ('dkirvell4@123-reg.co.uk', '$2a$04$JTEIcsTftgXjwcCvKZoyluRF4GvSpgric6xuAc00taDVPffmHx./q'),
-    ('iorrah5@economist.com', '$2a$04$gJqMMCVK2iWxRpREmeltp.Yog06gIz1QJIgYQJR5Z5VyEd/FfT0om'),
-    ('etruckell6@cisco.com', '$2a$04$Rlbe2MIw/589HuWuiyzJ/.Q8sxBn6hanJ1qV8B0WhdTBdD41uPfIO'),
-    ('gbricksey7@noaa.gov', '$2a$04$jcBAXOE2GAM6GPRcVsmv9u8h9znax76TbIHfWdrXB/gy9d27g3ONq'),
-    ('bkeoghan8@t.co', '$2a$04$ywdMIzDHXBYyv1e.xo0cb.9i6b2X3Ii6IMnTkVo1JA.iFnQRXBA.6'),
-    ('dfrankema9@noaa.gov', '$2a$04$62x8oxFS6/kBVlViR8nHv..zk1SRQViB0vuIALXXP/MBgudQIBxFa'),
+    ('sberrey0@ftc.gov', '$2a$12$5AIxjPpLmDg4lnEIZY20wuBpvC9Fcw1V7XBcH0ZoIbYZ4J2jnxdKS', true),
+    ('tkingaby1@vkontakte.ru', '$2a$04$L4ytMVXRckC5E/O4.gLP.uC9J58Sr8Pt7wblHki8AuasUqoMtCanq', true),
+    ('ladcock2@typepad.com', '$2a$04$VBqjGGOu9Us/OjMEZcufvOLycizHUoKJzzQRbPCkLvx60b7lL3yJO', true),
+    ('jrittmeier3@nbcnews.com', '$2a$04$KY3pibnuTDS2tBWnQX39eugy9hdLDccFT2YW4e2FsEKUH8CVC2QhO', true),
+    ('dkirvell4@123-reg.co.uk', '$2a$04$JTEIcsTftgXjwcCvKZoyluRF4GvSpgric6xuAc00taDVPffmHx./q', true),
+    ('iorrah5@economist.com', '$2a$04$gJqMMCVK2iWxRpREmeltp.Yog06gIz1QJIgYQJR5Z5VyEd/FfT0om', true),
+    ('etruckell6@cisco.com', '$2a$04$Rlbe2MIw/589HuWuiyzJ/.Q8sxBn6hanJ1qV8B0WhdTBdD41uPfIO', true),
+    ('gbricksey7@noaa.gov', '$2a$04$jcBAXOE2GAM6GPRcVsmv9u8h9znax76TbIHfWdrXB/gy9d27g3ONq', true),
+    ('bkeoghan8@t.co', '$2a$04$ywdMIzDHXBYyv1e.xo0cb.9i6b2X3Ii6IMnTkVo1JA.iFnQRXBA.6', true),
+    ('dfrankema9@noaa.gov', '$2a$04$62x8oxFS6/kBVlViR8nHv..zk1SRQViB0vuIALXXP/MBgudQIBxFa', true),
 -- doctors 15-24
-    ('bneles0@amazon.de', '$2a$12$4Eu2CYQUI8yFWv8xptVTPOdsflslqyOx1QS9ovHJmZZbJhr98ouOO'),
-    ('dgingell1@japanpost.jp', '$2a$04$0c494FoHg7nxolQ7xqA80e8iHvebfJ4vQgF/6GLGcZmKY7ey8VY/O'),
-    ('kbyrd2@statcounter.com', '$2a$04$X4T6WQA0ehKUt9x.E1RAUeUfp1JkPGojwOV6O/NyB9LCdA31SQuaa'),
-    ('cdumbarton3@wikimedia.org', '$2a$04$QYP8YW1eGxr3rbeg2aNXguUM6fQ8azW/DhDZZcURKUh7/ncjA6ms.'),
-    ('rkryszka4@reference.com', '$2a$04$xG6j0eRIi8FB7uSRY39P1e4IltjRCSdvkHxugsy6zGJDagi/RfGtC'),
-    ('bhumpherston5@businessweek.com', '$2a$04$qvfp5wSL04Ld9C1uVxLpS.oNyLNeR1VwCkKUqq5G5ZTuoflrCnKYu'),
-    ('hoboy6@examiner.com', '$2a$04$xCKZz8JzZH0HwiKJ7r8/IejINe7uTsMfONrKiijQRCJgHHIBn.SZ.'),
-    ('ntolossi7@artisteer.com', '$2a$04$XHAACwsJCOok93VgQaHv5Os7CDLL.tr/Ftw3PMtzEDAW9ZPFYe4gm'),
-    ('rvautin8@webeden.co.uk', '$2a$04$3ZI3g1fX6ZBkRyVUCn0N7.WLpX/QpFSC3CiNysggzxNyHtS9.96gC'),
-    ('rtruce9@tuttocitta.it', '$2a$04$x/ejbl0TQw67gNLoW8eznOTsr9JdBCkgXWGNS27TUgSgjwZAynfFu');
+    ('bneles0@amazon.de', '$2a$12$4Eu2CYQUI8yFWv8xptVTPOdsflslqyOx1QS9ovHJmZZbJhr98ouOO', true),
+    ('dgingell1@japanpost.jp', '$2a$04$0c494FoHg7nxolQ7xqA80e8iHvebfJ4vQgF/6GLGcZmKY7ey8VY/O', true),
+    ('kbyrd2@statcounter.com', '$2a$04$X4T6WQA0ehKUt9x.E1RAUeUfp1JkPGojwOV6O/NyB9LCdA31SQuaa', true),
+    ('cdumbarton3@wikimedia.org', '$2a$04$QYP8YW1eGxr3rbeg2aNXguUM6fQ8azW/DhDZZcURKUh7/ncjA6ms.', true),
+    ('rkryszka4@reference.com', '$2a$04$xG6j0eRIi8FB7uSRY39P1e4IltjRCSdvkHxugsy6zGJDagi/RfGtC', true),
+    ('bhumpherston5@businessweek.com', '$2a$04$qvfp5wSL04Ld9C1uVxLpS.oNyLNeR1VwCkKUqq5G5ZTuoflrCnKYu', true),
+    ('hoboy6@examiner.com', '$2a$04$xCKZz8JzZH0HwiKJ7r8/IejINe7uTsMfONrKiijQRCJgHHIBn.SZ.', true),
+    ('ntolossi7@artisteer.com', '$2a$04$XHAACwsJCOok93VgQaHv5Os7CDLL.tr/Ftw3PMtzEDAW9ZPFYe4gm', true),
+    ('rvautin8@webeden.co.uk', '$2a$04$3ZI3g1fX6ZBkRyVUCn0N7.WLpX/QpFSC3CiNysggzxNyHtS9.96gC', true),
+    ('rtruce9@tuttocitta.it', '$2a$04$x/ejbl0TQw67gNLoW8eznOTsr9JdBCkgXWGNS27TUgSgjwZAynfFu', true);
 
 insert into role (role)
 values
