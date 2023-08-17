@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface AppointmentDAO {
 
-    List<Appointment> findAppointments();
+    List<Appointment> findAppointments(Integer patientId);
 }

@@ -16,8 +16,8 @@ public class AppointmentService {
     private final AppointmentDAO appointmentDAO;
 
     @Transactional
-    public List<Appointment> findAppointments() {
-        List<Appointment> appointmentList = appointmentDAO.findAppointments();
+    public List<Appointment> findAppointments(Integer patientId) {
+        List<Appointment> appointmentList = appointmentDAO.findAppointments(patientId);
         return appointmentList;
     }
 }

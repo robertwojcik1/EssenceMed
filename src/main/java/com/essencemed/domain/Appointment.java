@@ -9,12 +9,12 @@ import java.time.LocalTime;
 @Value
 @Builder
 public class Appointment {
-    Long appointmentId;
+    Integer appointmentId;
     LocalDate date;
     LocalTime startTime;
     LocalTime endTime;
-    Long doctorId;
-    Long patientId;
+    String doctorsCredentials;
+    Integer patientId;
     Boolean cancelled;
     String notes;
 }

@@ -15,11 +15,11 @@ import java.util.List;
 public class AppointmentRepository implements AppointmentDAO {
 
     private final AppointmentJpaRepository appointmentJpaRepository;
-//    private final AppointmentEntityMapper appointmentEntityMapper;
+    private final DoctorRepository doctorRepository;
 
     @Override
-    public List<Appointment> findAppointments() {
-        List<AppointmentEntity> entityList = appointmentJpaRepository.findAll();
+    public List<Appointment> findAppointments(Integer patientId) {
+        List<AppointmentEntity> entityList = appointmentJpaRepository.findAllByPatientId(patientId);
         List<Appointment> appointmentList = new ArrayList<>();
 
         for (AppointmentEntity entity : entityList) {
@@ -27,8 +27,8 @@ public class AppointmentRepository implements AppointmentDAO {
                     .date(entity.getDate())
                     .startTime(entity.getStartTime())
                     .endTime(entity.getEndTime())
-                    .doctorId(entity.getDoctor().getDoctorId())
-                    .patientId(entity.getPatient().getPatientId())
+                    .doctorsCredentials(doctorRepository.getDoctorCredentials(entity.getDoctor().getDoctorId()))
+                    .patientId(entity.getPatient().getId())
                     .cancelled(entity.getCancelled())
                     .notes(entity.getNotes())
                     .build());

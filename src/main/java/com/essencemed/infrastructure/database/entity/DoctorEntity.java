@@ -18,7 +18,7 @@ public class DoctorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "doctor_id")
-    private Long doctorId;
+    private Integer doctorId;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
@@ -26,7 +26,7 @@ public class DoctorEntity {
     @Column(name = "pesel", unique = true)
     private String pesel;
     @Column(name = "user_id")
-    private Long userId;
+    private Integer userId;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "specialization_id")
     private SpecializationEntity specialization;
