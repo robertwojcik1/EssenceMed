@@ -23,14 +23,14 @@ public class DoctorEntity {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
-    @Column(name = "email", unique = true)
-    private String email;
-    @Column(name = "password")
-    private String password;
+    @Column(name = "pesel", unique = true)
+    private String pesel;
+    @Column(name = "user_id")
+    private Long userId;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "specialization_id")
     private SpecializationEntity specialization;
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<DoctorScheduleEntity> scheduleSet;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<AppointmentEntity> appointmentsSet;

@@ -23,12 +23,12 @@ public class PatientEntity {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
-    @Column(name = "email", unique = true)
-    private String email;
+    @Column(name = "pesel", unique = true)
+    private String pesel;
     @Column(name = "phone")
     private String phone;
-    @Column(name = "password")
-    private String password;
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @Column(name = "user_id")
+    private Long userId;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<AppointmentEntity> appointmentSet;
 }

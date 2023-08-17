@@ -8,6 +8,8 @@ import lombok.Value;
 public class Admin {
 
     Long adminId;
-    String email;
-    String password;
+    String firstName;
+    String lastName;
+    String pesel;
+    Long userId;
 }

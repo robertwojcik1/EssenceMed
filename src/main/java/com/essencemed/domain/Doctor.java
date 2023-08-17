@@ -9,7 +9,7 @@ public class Doctor {
     Long doctorId;
     String firstName;
     String lastName;
-    String email;
-    String password;
+    String pesel;
+    Long userId;
     Long specializationId;
 }
