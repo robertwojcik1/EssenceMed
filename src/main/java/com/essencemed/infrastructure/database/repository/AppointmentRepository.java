@@ -22,7 +22,9 @@ public class AppointmentRepository implements AppointmentDAO {
     @Override
     public List<Appointment> findAppointments(Integer patientId) {
         List<AppointmentEntity> entityList = appointmentJpaRepository.findAllByPatientId(patientId);
-        List<AppointmentEntity> sortedEntityList = entityList.stream().sorted(Comparator.comparing(AppointmentEntity::getDate))
+        List<AppointmentEntity> sortedEntityList = entityList.stream()
+                .sorted(Comparator.comparing(AppointmentEntity::getDate)
+                .thenComparing(AppointmentEntity::getStartTime))
                 .collect(Collectors.toList());
         List<Appointment> appointmentList = new ArrayList<>();
 
