@@ -14,9 +14,12 @@ import java.util.List;
 @Controller
 @AllArgsConstructor
 public class AppointmentsController {
+
+    private static final String APPOINTMENTS_LIST = "/appointments";
+    private static final String CANCEL_APPOINTMENT = "/appointments/cancel/{appointmentId}";
     private final AppointmentService appointmentService;
     private final PatientService patientService;
-    @GetMapping(value = "/appointments")
+    @GetMapping(value = APPOINTMENTS_LIST)
     public String showPatientAppointments(Model model) throws Exception {
         Integer patientId = patientService.getPatientId();
         List<Appointment> appointmentList = appointmentService.findAppointments(patientId);
@@ -24,7 +27,7 @@ public class AppointmentsController {
             return "appointments";
         }
 
-    @PostMapping("/appointments/cancel/{appointmentId}")
+    @PostMapping(value = CANCEL_APPOINTMENT)
     public ResponseEntity<String> cancelAppointment(@PathVariable Integer appointmentId) {
         appointmentService.cancelAppointment(appointmentId);
 
