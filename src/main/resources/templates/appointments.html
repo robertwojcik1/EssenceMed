@@ -42,6 +42,7 @@
                 <th>Godzina</th>
                 <th>Lekarz</th>
                 <th>Notatka</th>
+                <th>Status</th>
             </tr>
             </thead>
 
@@ -51,12 +52,15 @@
                 <td th:text="${appointment.getStartTime()}"></td>
                 <td th:text="${appointment.getDoctorsCredentials()}"></td>
                 <td th:text="${appointment.getNotes()}"></td>
-                <td>
+                <td th:if="${appointment.getCancelled().equals(false)}">
                     <form th:action="@{/appointments/cancel/{appointmentId}(appointmentId=${appointment.getAppointmentId()})}" method="post">
-                    <button class="btn btn-secondary" type="submit">
-                    Anuluj wizytę
-                </button>
+                        <button class="btn btn-secondary" type="submit">
+                            Anuluj wizytę
+                        </button>
                     </form>
+                </td>
+                <td th:unless="${appointment.getCancelled().equals(false)}">
+                    <span>Wizyta anulowana</span>
                 </td>
             </tr>
             </tbody>
