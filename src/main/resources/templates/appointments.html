@@ -51,6 +51,13 @@
                 <td th:text="${appointment.getStartTime()}"></td>
                 <td th:text="${appointment.getDoctorsCredentials()}"></td>
                 <td th:text="${appointment.getNotes()}"></td>
+                <td>
+                    <form th:action="@{/appointments/cancel/{appointmentId}(appointmentId=${appointment.getAppointmentId()})}" method="post">
+                    <button class="btn btn-secondary" type="submit">
+                    Anuluj wizytę
+                </button>
+                    </form>
+                </td>
             </tr>
             </tbody>
         </table>

@@ -7,4 +7,5 @@ import java.util.List;
 public interface AppointmentDAO {
 
     List<Appointment> findAppointments(Integer patientId);
+    void cancelAppointment(Integer appointmentId);
 }

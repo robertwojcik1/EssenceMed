@@ -11,7 +11,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-@Slf4j
 @Service
 @AllArgsConstructor
 public class PatientService {
@@ -33,8 +32,10 @@ public class PatientService {
         return entity.getId();
     }
 
-    public Integer getPatientId(Integer userId) {
-        PatientEntity entity = patientDAO.findByUserId(userId);
+    public Integer getPatientId() {
+        String loggedInPatientEmail = getLoggedInPatientEmail();
+        Integer userIdForPatient = getUserIdByEmail(loggedInPatientEmail);
+        PatientEntity entity = patientDAO.findByUserId(userIdForPatient);
         return Math.toIntExact(entity.getId());
     }
 }

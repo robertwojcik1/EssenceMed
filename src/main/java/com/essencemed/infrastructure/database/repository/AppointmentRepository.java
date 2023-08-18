@@ -24,6 +24,7 @@ public class AppointmentRepository implements AppointmentDAO {
 
         for (AppointmentEntity entity : entityList) {
             appointmentList.add(Appointment.builder()
+                    .appointmentId(entity.getAppointmentId())
                     .date(entity.getDate())
                     .startTime(entity.getStartTime())
                     .endTime(entity.getEndTime())
@@ -34,5 +35,10 @@ public class AppointmentRepository implements AppointmentDAO {
                     .build());
         }
         return appointmentList;
+    }
+
+    @Override
+    public void cancelAppointment(Integer appointmentId) {
+        appointmentJpaRepository.cancelAppointment(appointmentId);
     }
 }

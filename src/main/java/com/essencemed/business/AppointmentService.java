@@ -20,4 +20,8 @@ public class AppointmentService {
         List<Appointment> appointmentList = appointmentDAO.findAppointments(patientId);
         return appointmentList;
     }
+    @Transactional
+    public void cancelAppointment(Integer appointmentId) {
+        appointmentDAO.cancelAppointment(appointmentId);
+    }
 }

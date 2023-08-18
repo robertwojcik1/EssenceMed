@@ -40,7 +40,7 @@ public class SecurityConfiguration {
         httpSecurity.csrf().disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/login").permitAll()
-                .requestMatchers("/", "/error", "/appointments/**").hasAnyAuthority("ADMIN", "PATIENT")
+                .requestMatchers("/**", "/error", "/appointments/**").hasAnyAuthority("ADMIN", "PATIENT")
                 .and()
                 .formLogin()
                 .permitAll()

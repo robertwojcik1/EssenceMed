@@ -18,7 +18,7 @@ public class AppointmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "appointment_id")
-    private Long appointmentId;
+    private Integer appointmentId;
     @Column(name = "date")
     private LocalDate date;
     @Column(name = "start_time")
